@@ -19,7 +19,7 @@ Public Class ContactListing
         End Using
     End Sub
 
-    Private Sub GetContacts() Handles ButtonAdd.Click
+    Private Sub GetContacts()
         Using contactRepo As New ContactRepository()
             contacts = contactRepo.GetContacts()
             grdContacts.DataSource = contacts
