@@ -81,6 +81,7 @@ Partial Class AddContact
         '
         'btnAdd
         '
+        Me.btnAdd.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.btnAdd.Location = New System.Drawing.Point(210, 191)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
