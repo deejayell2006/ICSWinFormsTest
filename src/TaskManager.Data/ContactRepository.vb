@@ -27,11 +27,11 @@ Public Class ContactRepository
 
         Using connection As New SQLiteConnection(SQLiteHelper.DBPath)
             connection.Open()
-            Dim selectQuery As String = "SELECT Name, Email, 0 AS Phone FROM Contact WHERE 1 = 0"
+            Dim selectQuery As String = "SELECT Name, Email, Phone FROM Contact"
             Using command As New SQLiteCommand(selectQuery, connection)
                 Using reader As SQLiteDataReader = command.ExecuteReader()
                     While reader.Read()
-                        contacts.Add(New Contact() With {.Name = reader("Name"), .Email = reader("Email"), .Phone = reader("Phone")})
+                        contacts.Add(New Contact() With {.Name = reader("Name").ToString(), .Email = reader("Email").ToString(), .Phone = reader("Phone").ToString()})
                     End While
                 End Using
             End Using
