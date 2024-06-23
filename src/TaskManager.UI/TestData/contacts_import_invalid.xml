@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contacts>
+  <contact>
+    <email>john.lennon@beatles.com</email>
+    <name>John Lennon</name>
+    <phone>1111111111</phone>
+  </contact>
+  <contact>
+    <email>paul.mccartney@beatles.com</email>
+    <name>Paul McCartney</name>
+    <phone>abcdefghij</phone>
+  </contact>
+  <contact>
+    <email></email>
+    <name>George Harrison</name>
+    <phone>3333333333</phone>
+  </contact>
+  <contact>
+    <email>ringo.starr@beatles.com</email>
+    <name></name>
+    <phone>4444444444</phone>
+  </contact>
+</contacts>
+ 
