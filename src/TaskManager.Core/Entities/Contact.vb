@@ -16,7 +16,7 @@
             Return _email
         End Get
         Set(ByVal value As String)
-            _name = value
+            _email = value
         End Set
     End Property
 
