@@ -10,7 +10,7 @@ Public Class ContactRepository
     Public Function InsertContact(contact As Contact) As Boolean
         Using connection As New SQLiteConnection(SQLiteHelper.DBPath)
             connection.Open()
-            Dim insertQuery As String = "INSERT INTO Contact (Name, Email, Phone) VALUES (@Email, @Name, @Phone)"
+            Dim insertQuery As String = "INSERT INTO Contact (Name, Email, Phone) VALUES (@Name, @Email, @Phone)"
             Using command As New SQLiteCommand(insertQuery, connection)
                 command.Parameters.AddWithValue("@Name", contact.Name)
                 command.Parameters.AddWithValue("@Email", contact.Email)
