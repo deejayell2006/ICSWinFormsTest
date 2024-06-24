@@ -25,6 +25,7 @@ Partial Class ContactListing
         Me.grdContacts = New System.Windows.Forms.DataGridView()
         Me.ButtonAdd = New System.Windows.Forms.Button()
         Me.lblHeader = New System.Windows.Forms.Label()
+        Me.ButtonEdit = New System.Windows.Forms.Button()
         CType(Me.grdContacts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -32,7 +33,11 @@ Partial Class ContactListing
         '
         Me.grdContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdContacts.Location = New System.Drawing.Point(12, 35)
+        Me.grdContacts.MultiSelect = False
         Me.grdContacts.Name = "grdContacts"
+        Me.grdContacts.ReadOnly = True
+        Me.grdContacts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.grdContacts.ShowEditingIcon = False
         Me.grdContacts.Size = New System.Drawing.Size(448, 357)
         Me.grdContacts.TabIndex = 0
         '
@@ -55,11 +60,21 @@ Partial Class ContactListing
         Me.lblHeader.TabIndex = 2
         Me.lblHeader.Text = "Contacts"
         '
+        'ButtonEdit
+        '
+        Me.ButtonEdit.Location = New System.Drawing.Point(104, 407)
+        Me.ButtonEdit.Name = "ButtonEdit"
+        Me.ButtonEdit.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonEdit.TabIndex = 3
+        Me.ButtonEdit.Text = "Edit Contact"
+        Me.ButtonEdit.UseVisualStyleBackColor = True
+        '
         'ContactListing
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(478, 500)
+        Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.lblHeader)
         Me.Controls.Add(Me.ButtonAdd)
         Me.Controls.Add(Me.grdContacts)
@@ -74,4 +89,5 @@ Partial Class ContactListing
     Friend WithEvents grdContacts As DataGridView
     Friend WithEvents ButtonAdd As Button
     Friend WithEvents lblHeader As Label
+    Friend WithEvents ButtonEdit As Button
 End Class

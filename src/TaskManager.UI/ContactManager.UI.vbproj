@@ -119,6 +119,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditContact.Designer.vb">
+      <DependentUpon>EditContact.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditContact.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddContact.Designer.vb">
       <DependentUpon>AddContact.vb</DependentUpon>
     </Compile>
@@ -150,6 +156,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EditContact.resx">
+      <DependentUpon>EditContact.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddContact.resx">
       <DependentUpon>AddContact.vb</DependentUpon>
     </EmbeddedResource>
